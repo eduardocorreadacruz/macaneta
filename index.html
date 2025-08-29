@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensores Industriais e Suas Aplicações Tecnológicas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+ 
+    </style>
+</head>
+<body>
+
+
+        <div class="container">
+            <div class="logo">
+                <i class="logo-icon fas fa-microchip"></i>
+                <h1>Sensores Industriais & Aplicações</h1>
+            </div>
+            <nav class="site-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#intro"><i class="fas fa-home"></i> Início</a></li><br>
+                    <li><a href="#acelerometro"><i class="fas fa-vibration"></i> Acelerômetro</a></li><br>
+                    <li><a href="#corrente"><i class="fas fa-bolt"></i> Corrente</a></li><br>
+                    <li><a href="#nivel"><i class="fas fa-chart-line"></i> Nível</a></li><br>
+                    <li><a href="#proximidade"><i class="fas fa-object-group"></i> Proximidade</a></li><br>
+                    <li><a href="#rfid"><i class="fas fa-wifi"></i> RFID/NFC</a></li><b></b><br>
+                    <li><a href="#referencias"><i class="fas fa-book"></i> Referências</a></li><br>
+                </ul>
+            </nav>
+        </div>
+
+    <main class="container">
+        <section id="intro" class="content-section" aria-labelledby="intro-title">
+            <h2 id="intro-title"><i class="fas fa-home"></i> Introdução</h2>
+            <p>Panorama dos principais sensores utilizados na Indústria 4.0 (IIoT), seus princípios de funcionamento, parâmetros técnicos, aplicações e integração com plataformas como Arduino e Raspberry Pi.</p>
+        </section>
+        
+        <section id="acelerometro" class="content-section" aria-labelledby="acelerometro-title">
+            <h2 id="acelerometro-title"><i class="fas fa-vibration"></i> 1. Sensor de Vibração (Acelerômetro)</h2>
+            <img src="./assets/img/sensor-de-vibracao-sw-420.jpg" alt="">
+            <article>
+                <h3><i class="fas fa-fingerprint"></i> 1.1 Função Principal</h3>
+                <p>O sensor de vibração, tecnicamente conhecido como acelerômetro, mede a aceleração de um corpo. Pode operar de forma estática, para estimar inclinação em relação ao campo gravitacional, ou de forma dinâmica, para quantificar vibrações, impactos e movimentos complexos.</p>
+                <h3><i class="fas fa-sliders-h"></i> 1.2 Principais Características Técnicas</h3>
+                <p>A fabricação predominante envolve tecnologias MEMS e piezoelétrica. A piezoelétrica é comum em análises de alta frequência. Parâmetros-chave: alcance (g), sensibilidade (mV/g) e largura de banda. Saída analógica contínua ou digital (I²C/SPI).</p>
+                <h3><i class="fas fa-cogs"></i> 1.3 Exemplos de Aplicações Práticas</h3>
+                <p>Base para manutenção preditiva na IIoT: análise espectral via FFT para diagnóstico precoce de rolamentos. Em aeroespacial, integra IMUs e monitora integridade estrutural. Em veículos autônomos, auxilia no posicionamento e controle de estabilidade.</p>
+                <h3><i class="fas fa-microchip"></i> 1.4 Compatibilidade com Arduino e Raspberry Pi</h3>
+                <p>Integração facilitada por módulos MEMS de baixo custo, como MPU-6050 e ADXL345, via I²C e com bibliotecas amplas.</p>
+            </article>
+        </section>
+
+        <section id="corrente" class="content-section" aria-labelledby="corrente-title">
+            <h2 id="corrente-title"><i class="fas fa-bolt"></i> 2. Sensor de Corrente Elétrica</h2>
+            <img src="./assets/img/modulo-sensor-de-corrente-eletrica-acs712-5a.jpg" alt="">
+            <article>
+                <h3><i class="fas fa-fingerprint"></i> 2.1 Função Principal</h3>
+                <p>Mede a intensidade de corrente em um condutor, essencial para monitoramento energético, gestão de potência e diagnóstico de falhas.</p>
+                <h3><i class="fas fa-sliders-h"></i> 2.2 Principais Características Técnicas</h3>
+                <p>Tecnologias: Efeito Hall (não invasiva), Transformador de Corrente (AC) e Resistor Shunt (queda de tensão). Definidos por alcance, precisão e tipo de corrente (AC/DC). Saída analógica (4–20 mA) ou digital (I²C/SPI).</p>
+                <h3><i class="fas fa-cogs"></i> 2.3 Exemplos de Aplicações Práticas</h3>
+                <p>Na IIoT, permitem monitoramento energético e detecção de anomalias. Em veículos elétricos, integram o BMS para cálculo de estado de carga. Em aeroespacial, monitoram PDUs.</p>
+                <h3><i class="fas fa-microchip"></i> 2.4 Compatibilidade com Arduino e Raspberry Pi</h3>
+                <p>Comuns com módulos ACS712 (Hall) e INA219 (I²C), este último medindo corrente, tensão e potência.</p>
+            </article>
+        </section>
+
+        <section id="nivel" class="content-section" aria-labelledby="nivel-title">
+            <h2 id="nivel-title"><i class="fas fa-chart-line"></i> 3. Sensor de Nível</h2>
+            <img src="./assets/img/images.jpg" alt="">
+            <article>
+                <h3><i class="fas fa-fingerprint"></i> 3.1 Função Principal</h3>
+                <p>Determina a altura de materiais líquidos ou sólidos em reservatórios, em modo contínuo ou de ponto.</p>
+                <h3><i class="fas fa-sliders-h"></i> 3.2 Principais Características Técnicas</h3>
+                <p>Sem contato: ultrassônicos e radar (robusto contra poeira e vapor). De contato: boia e capacitivo. Saídas discretas ou contínuas (4–20 mA) e protocolos digitais.</p>
+                <h3><i class="fas fa-cogs"></i> 3.3 Exemplos de Aplicações Práticas</h3>
+                <p>Gestão remota de estoques (silos, tanques), medição de propelente em foguetes, e medidor de combustível em veículos.</p>
+                <h3><i class="fas fa-microchip"></i> 3.4 Compatibilidade com Arduino e Raspberry Pi</h3>
+                <p>HC-SR04 adaptado como medidor sem contato; chaves de boia conectáveis diretamente a GPIOs.</p>
+            </article>
+        </section>
+
+        <section id="proximidade" class="content-section" aria-labelledby="proximidade-title">
+            <h2 id="proximidade-title"><i class="fas fa-object-group"></i> 4. Sensor de Proximidade Indutivo e Capacitivo</h2>
+            <img src="./assets/img/sensor-indutivo-vs-capacitivo-1024x419.jpg" alt="">
+            <article>
+                <h3><i class="fas fa-fingerprint"></i> 4.1 Função Principal</h3>
+                <p>Detectam presença de objetos a curta distância sem contato físico; o indutivo detecta metais, o capacitivo detecta diversos materiais.</p>
+                <h3><i class="fas fa-sliders-h"></i> 4.2 Principais Características Técnicas</h3>
+                <p>Indutivo: campo eletromagnético, robusto em ambientes agressivos. Capacitivo: campo eletrostático, detecta materiais com constante dielétrica distinta do ar. Parâmetros: distância nominal (mm) e saída digital (NPN/PNP).</p>
+                <h3><i class="fas fa-cogs"></i> 4.3 Exemplos de Aplicações Práticas</h3>
+                <p>Contagem em esteiras, fim de curso em CNC, verificação de posicionamento e nivelamento de mesa em impressoras 3D.</p>
+                <h3><i class="fas fa-microchip"></i> 4.4 Compatibilidade com Arduino e Raspberry Pi</h3>
+                <p>Operando tipicamente em 10–30 VDC, exigem interface (divisor de tensão, optoacoplador) para 5V/3.3V dos microcontroladores.</p>
+            </article>
+        </section>
+
+        <section id="rfid" class="content-section" aria-labelledby="rfid-title">
+            <h2 id="rfid-title"><i class="fas fa-wifi"></i> 5. Leitor RFID / NFC</h2>
+            <img src="./assets/img/images (1).jpg" alt="">
+            <article>
+                <h3><i class="fas fa-fingerprint"></i> 5.1 Função Principal</h3>
+                <p>RFID identifica objetos via rádio; o leitor interroga a tag que responde com dados. NFC é um subconjunto HF (13,56 MHz) para comunicação segura a curtas distâncias.</p>
+                <h3><i class="fas fa-sliders-h"></i> 5.2 Principais Características Técnicas</h3>
+                <p>Frequências: LF, HF (13,56 MHz, inclui NFC) e UHF, impactando alcance e velocidade. Interfaces ao hospedeiro: UART, SPI, USB.</p>
+                <h3><i class="fas fa-cogs"></i> 5.3 Exemplos de Aplicações Práticas</h3>
+                <p>Rastreamento de ativos e passaporte digital do produto na IIoT; inventário logístico; NFC em pagamentos e controle de acesso.</p>
+                <h3><i class="fas fa-microchip"></i> 5.4 Compatibilidade com Arduino e Raspberry Pi</h3>
+                <p>Prototipagem acessível com MFRC522 (13,56 MHz) via SPI, compatível com ampla gama de tags.</p>
+            </article>
+        </section>
+
+        <section id="referencias" class="content-section" aria-labelledby="referencias-title">
+            <h2 id="referencias-title"><i class="fas fa-book"></i> 6. Referências</h2>
+            <ul class="refs-list">
+                <li><p>ALL ABOUT CIRCUITS. Choosing the Right Current Sensor for Your Application. 2019. <a href="https://www.allaboutcircuits.com/technical-articles/choosing-the-right-current-sensor-for-your-application/" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>ANALOG DEVICES, INC. Accelerometer Selection Guide. 2017. <a href="https://www.analog.com/en/technical-articles/accelerometer-selection-guide.html" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>ARDUINO E CIA. Sensor de Nível de Água com Arduino. 2014. <a href="https://www.arduinoecia.com.br/2014/06/sensor-de-nivel-de-agua-com-arduino.html" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>AUTOMATIONDIRECT. Proximity Sensor Basics. 2022. <a href="https://library.automationdirect.com/proximity-sensor-basics/" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>BAÚ DA ELETRÔNICA. Sensor INA219 com Arduino. 2023. <a href="https://www.baudaeletronica.com.br/sensor-de-corrente-tensao-e-potencia-ina219-com-arduino/" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>BRAGA, Newton C. Sensores Capacitivos. 2012. <a href="http://www.newtoncbraga.com.br/index.php/como-funciona/12809-art2720" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>EMERSON. Level Measurement Technologies. 2025. <a href="https://www.emerson.com/en-us/automation/measurement-instrumentation/level-measurement" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>ENDRESS+HAUSER. Princípios de Medição de Nível. 2025. <a href="https://www.br.endress.com/pt/instrumentacao-de-campo-know-how/medicao-de-nivel" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>NXP. About NFC Technology. 2025. <a href="https://www.nxp.com/applications/connectivity/nfc:NFC-TECHNOLOGY" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>RFID JOURNAL. How Does RFID Work?. 2025. <a href="https://www.rfidjournal.com/how-does-rfid-work" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>SCHNEIDER ELECTRIC. Inductive/Capacitive Sensors. 2025. <a href="https://www.se.com/ww/en/product-range/663-inductive-capacitive-sensors/" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>SIEMENS AG. SIRIUS Vibration Monitoring. 2025. <a href="https://www.siemens.com/global/en/products/automation/industrial-controls/monitoring-control-devices/vibration-monitoring.html" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>TEXAS INSTRUMENTS. Current Sense Amplifiers Overview. 2025. <a href="https://www.ti.com/power-management/current-sense-amplifiers/overview.html" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+                <li><p>VIDA DE SILÍCIO. RFID e MFRC522 com Arduino. 2023. <a href="https://vidadesilicio.com.br/como-funciona-rfid-leitor-mfrc522-com-arduino/" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p><small>© 2025 • Conteúdo educacional sobre IIoT</small></p>
+    </footer>
+
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>
