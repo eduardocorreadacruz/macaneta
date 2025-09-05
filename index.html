@@ -18,33 +18,567 @@
 <body>
 
 
-        <div class="container">
-            <div class="logo">
-                <i class="logo-icon fas fa-microchip"></i>
-                <h1>Sensores Industriais & Aplicações</h1>
+        <header class="site-header" role="banner">
+            <div class="container">
+                <div class="logo" aria-label="Página inicial">
+                    <i class="logo-icon fas fa-microchip" aria-hidden="true"></i>
+                    <h1>Sensores Industriais & Aplicações</h1>
+                </div>
+                <nav class="tab-navigation" aria-label="Navegação por Abas">
+                    <button class="tab-btn active" data-tab="intro">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <span>Introdução</span>
+                    </button>
+                    <button class="tab-btn" data-tab="sensores">
+                        <i class="fas fa-microchip" aria-hidden="true"></i>
+                        <span>Sensores</span>
+                    </button>
+                    <button class="tab-btn" data-tab="aplicacoes">
+                        <i class="fas fa-cogs" aria-hidden="true"></i>
+                        <span>Aplicações</span>
+                    </button>
+                    <button class="tab-btn" data-tab="codigos">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <span>Códigos</span>
+                    </button>
+                    <button class="tab-btn" data-tab="especificacoes">
+                        <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                        <span>Especificações</span>
+                    </button>
+                    <button class="tab-btn" data-tab="integracao">
+                        <i class="fas fa-plug" aria-hidden="true"></i>
+                        <span>Integração</span>
+                    </button>
+                    <button class="tab-btn" data-tab="referencias">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        <span>Referências</span>
+                    </button>
+                </nav>
             </div>
-            <nav class="site-nav" aria-label="Navegação Principal">
-                <ul>
-                    <li><a href="#intro"><i class="fas fa-home"></i> Início</a></li><br>
-                    <li><a href="#acelerometro"><i class="fas fa-vibration"></i> Acelerômetro</a></li><br>
-                    <li><a href="#corrente"><i class="fas fa-bolt"></i> Corrente</a></li><br>
-                    <li><a href="#nivel"><i class="fas fa-chart-line"></i> Nível</a></li><br>
-                    <li><a href="#proximidade"><i class="fas fa-object-group"></i> Proximidade</a></li><br>
-                    <li><a href="#rfid"><i class="fas fa-wifi"></i> RFID/NFC</a></li><b></b><br>
-                    <li><a href="#referencias"><i class="fas fa-book"></i> Referências</a></li><br>
-                </ul>
-            </nav>
-        </div>
+        </header>
 
     <main class="container">
-        <section id="intro" class="content-section" aria-labelledby="intro-title">
-            <h2 id="intro-title"><i class="fas fa-home"></i> Introdução</h2>
-            <p>Panorama dos principais sensores utilizados na Indústria 4.0 (IIoT), seus princípios de funcionamento, parâmetros técnicos, aplicações e integração com plataformas como Arduino e Raspberry Pi.</p>
-        </section>
+        <!-- Aba 1: Introdução -->
+        <div id="intro" class="tab-content active">
+            <div class="presentation-slide">
+                <h2><i class="fas fa-home"></i> Introdução aos Sensores Industriais</h2>
+                <div class="intro-grid">
+                    <div class="intro-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>Indústria 4.0</h3>
+                        <p>Revolução digital que integra sensores inteligentes, IoT e análise de dados para otimizar processos industriais.</p>
+                    </div>
+                    <div class="intro-card">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Sensores Inteligentes</h3>
+                        <p>Dispositivos que convertem grandezas físicas em sinais elétricos, essenciais para automação e monitoramento.</p>
+                    </div>
+                    <div class="intro-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>IIoT</h3>
+                        <p>Internet das Coisas Industrial conecta sensores, máquinas e sistemas para criar fábricas inteligentes.</p>
+                    </div>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Tipos de Sensores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Exemplos de Código</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Prático</span>
+                    </div>
+                </div>
+
+                <div class="glossary">
+                    <h3>Glossário rápido (símbolos, unidades e pronúncia)</h3>
+                    <ul class="glossary-list">
+                        <li>
+                            <span class="term">Ω</span>
+                            <span class="name">Ohm</span>
+                            <span class="pron">pronúncia: "ôm"</span>
+                            <span class="desc">Unidade de resistência elétrica. Ex.: 10 Ω = dez ôm.</span>
+                        </li>
+                        <li>
+                            <span class="term">kΩ / MΩ</span>
+                            <span class="name">Quilo-ohm / Mega-ohm</span>
+                            <span class="pron">pronúncia: "quilo-ôm" / "mega-ôm"</span>
+                            <span class="desc">Múltiplos de resistência. 1 kΩ = 1.000 Ω; 1 MΩ = 1.000.000 Ω.</span>
+                        </li>
+                        <li>
+                            <span class="term">μF / nF / pF</span>
+                            <span class="name">Micro/nano/pico farad</span>
+                            <span class="pron">pronúncia: "micro-fárad", "nano-fárad", "pico-fárad"</span>
+                            <span class="desc">Capacitância: 1 μF = 10⁻⁶ F, 1 nF = 10⁻⁹ F, 1 pF = 10⁻¹² F.</span>
+                        </li>
+                        <li>
+                            <span class="term">V / mV</span>
+                            <span class="name">Volt / mili-volt</span>
+                            <span class="pron">pronúncia: "volt", "mili-volt"</span>
+                            <span class="desc">Tensão elétrica. 1 mV = 0,001 V.</span>
+                        </li>
+                        <li>
+                            <span class="term">A / mA</span>
+                            <span class="name">Ampère / mili-ampère</span>
+                            <span class="pron">pronúncia: "am-pére", "mili-am-pére"</span>
+                            <span class="desc">Corrente elétrica. 1 mA = 0,001 A.</span>
+                        </li>
+                        <li>
+                            <span class="term">Hz / kHz</span>
+                            <span class="name">Hertz / quilo-hertz</span>
+                            <span class="pron">pronúncia: "hértz", "quilo-hértz"</span>
+                            <span class="desc">Frequência. 1 kHz = 1.000 Hz.</span>
+                        </li>
+                        <li>
+                            <span class="term">Ω·m</span>
+                            <span class="name">Ohm-metro</span>
+                            <span class="pron">pronúncia: "ôm-metro"</span>
+                            <span class="desc">Resistividade elétrica do material.</span>
+                        </li>
+                        <li>
+                            <span class="term">dB</span>
+                            <span class="name">Decibel</span>
+                            <span class="pron">pronúncia: "dê-bêl"</span>
+                            <span class="desc">Unidade logarítmica usada em eletrônica e sinais.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         
-        <section id="acelerometro" class="content-section" aria-labelledby="acelerometro-title">
+        <!-- Aba 2: Sensores -->
+        <div id="sensores" class="tab-content">
+            <div class="presentation-slide">
+                <h2><i class="fas fa-microchip"></i> Tipos de Sensores Industriais</h2>
+                <div class="sensor-grid">
+                    <div class="sensor-card" data-sensor="vibracao">
+                        <div class="sensor-icon">
+                            <i class="fas fa-vibration"></i>
+                        </div>
+                        <h3>Sensor de Vibração</h3>
+                        <p>Acelerômetro para monitoramento de máquinas e manutenção preditiva</p>
+                        <div class="sensor-specs">
+                            <span class="spec">±5g</span>
+                            <span class="spec">I²C/SPI</span>
+                            <span class="spec">MEMS</span>
+                        </div>
+                    </div>
+                    <div class="sensor-card" data-sensor="corrente">
+                        <div class="sensor-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Sensor de Corrente</h3>
+                        <p>Medição de corrente elétrica por efeito Hall para monitoramento energético</p>
+                        <div class="sensor-specs">
+                            <span class="spec">±5A</span>
+                            <span class="spec">185mV/A</span>
+                            <span class="spec">Hall</span>
+                        </div>
+                    </div>
+                    <div class="sensor-card" data-sensor="nivel">
+                        <div class="sensor-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Sensor de Nível</h3>
+                        <p>Medição ultrassônica de nível em tanques e silos</p>
+                        <div class="sensor-specs">
+                            <span class="spec">2-400cm</span>
+                            <span class="spec">40kHz</span>
+                            <span class="spec">Ultrassom</span>
+                        </div>
+                    </div>
+                    <div class="sensor-card" data-sensor="proximidade">
+                        <div class="sensor-icon">
+                            <i class="fas fa-object-group"></i>
+                        </div>
+                        <h3>Sensor de Proximidade</h3>
+                        <p>Detecção indutiva e capacitiva para contagem e posicionamento</p>
+                        <div class="sensor-specs">
+                            <span class="spec">0-20mm</span>
+                            <span class="spec">NPN/PNP</span>
+                            <span class="spec">Indutivo</span>
+                        </div>
+                    </div>
+                    <div class="sensor-card" data-sensor="rfid">
+                        <div class="sensor-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Leitor RFID/NFC</h3>
+                        <p>Identificação por radiofrequência para rastreamento de ativos</p>
+                        <div class="sensor-specs">
+                            <span class="spec">13.56MHz</span>
+                            <span class="spec">SPI</span>
+                            <span class="spec">ISO14443</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aba 3: Aplicações -->
+        <div id="aplicacoes" class="tab-content">
+            <div class="presentation-slide">
+                <h2><i class="fas fa-cogs"></i> Aplicações Práticas</h2>
+                <div class="application-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Manutenção Preditiva</h3>
+                            <p>Sensores de vibração monitoram rolamentos e motores, detectando falhas antes que ocorram.</p>
+                            <div class="tech-stack">
+                                <span class="tech">SW-420</span>
+                                <span class="tech">FFT</span>
+                                <span class="tech">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Monitoramento Energético</h3>
+                            <p>Sensores de corrente medem consumo em tempo real, otimizando eficiência energética.</p>
+                            <div class="tech-stack">
+                                <span class="tech">ACS712</span>
+                                <span class="tech">MQTT</span>
+                                <span class="tech">Grafana</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Gestão de Estoque</h3>
+                            <p>Sensores de nível monitoram silos e tanques, automatizando controle de inventário.</p>
+                            <div class="tech-stack">
+                                <span class="tech">HC-SR04</span>
+                                <span class="tech">SCADA</span>
+                                <span class="tech">Modbus</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Automação Industrial</h3>
+                            <p>Sensores de proximidade e RFID controlam esteiras e identificam produtos.</p>
+                            <div class="tech-stack">
+                                <span class="tech">MFRC522</span>
+                                <span class="tech">PLC</span>
+                                <span class="tech">OPC-UA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aba 4: Códigos -->
+        <div id="codigos" class="tab-content">
+            <div class="presentation-slide">
+                <h2><i class="fas fa-code"></i> Exemplos de Código Arduino</h2>
+                <div class="code-tabs">
+                    <div class="code-tab-nav">
+                        <button class="code-tab-btn active" data-code="vibracao">Vibração</button>
+                        <button class="code-tab-btn" data-code="corrente">Corrente</button>
+                        <button class="code-tab-btn" data-code="nivel">Nível</button>
+                        <button class="code-tab-btn" data-code="proximidade">Proximidade</button>
+                        <button class="code-tab-btn" data-code="rfid">RFID</button>
+                    </div>
+                    <div class="code-content">
+                        <div id="code-vibracao" class="code-tab-panel active">
+                            <h3>Sensor de Vibração (SW-420)</h3>
+                            <pre><code class="language-cpp">const int pinVibracao = 2;
+volatile bool vibracaoDetectada = false;
+
+void isrVibracao() {
+  vibracaoDetectada = true;
+}
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(pinVibracao, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(pinVibracao), isrVibracao, FALLING);
+}
+
+void loop() {
+  if (vibracaoDetectada) {
+    vibracaoDetectada = false;
+    Serial.println("Vibração detectada!");
+  }
+  delay(10);
+}</code></pre>
+                        </div>
+                        <div id="code-corrente" class="code-tab-panel">
+                            <h3>Sensor de Corrente (ACS712)</h3>
+                            <pre><code class="language-cpp">const int pinACS = A0;
+const float sensibilidade = 0.185; // mV/A
+
+float calcularCorrente() {
+  int leitura = analogRead(pinACS);
+  float tensao = (leitura * 5.0) / 1023.0;
+  float tensaoCentrada = tensao - 2.5;
+  return tensaoCentrada / sensibilidade;
+}
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  float corrente = calcularCorrente();
+  Serial.print("Corrente: ");
+  Serial.print(corrente, 3);
+  Serial.println(" A");
+  delay(1000);
+}</code></pre>
+                        </div>
+                        <div id="code-nivel" class="code-tab-panel">
+                            <h3>Sensor de Nível (HC-SR04)</h3>
+                            <pre><code class="language-cpp">const int trigPin = 9;
+const int echoPin = 10;
+
+float medirDistancia() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  long duracao = pulseIn(echoPin, HIGH);
+  return (duracao * 0.0343) / 2;
+}
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  float distancia = medirDistancia();
+  Serial.print("Distância: ");
+  Serial.print(distancia, 2);
+  Serial.println(" cm");
+  delay(500);
+}</code></pre>
+                        </div>
+                        <div id="code-proximidade" class="code-tab-panel">
+                            <h3>Sensor de Proximidade</h3>
+                            <pre><code class="language-cpp">const int pinSensor = 3;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(pinSensor, INPUT_PULLUP);
+}
+
+void loop() {
+  int estado = digitalRead(pinSensor);
+  bool ativo = (estado == LOW);
+  
+  Serial.print("Sensor ativo: ");
+  Serial.println(ativo ? "SIM" : "NAO");
+  delay(200);
+}</code></pre>
+                        </div>
+                        <div id="code-rfid" class="code-tab-panel">
+                            <h3>Leitor RFID (MFRC522)</h3>
+                            <pre><code class="language-cpp">#include &lt;SPI.h&gt;
+#include &lt;MFRC522.h&gt;
+
+MFRC522 mfrc522(10, 9);
+
+void setup() {
+  Serial.begin(9600);
+  SPI.begin();
+  mfrc522.PCD_Init();
+}
+
+void loop() {
+  if (mfrc522.PICC_IsNewCardPresent() && mfrc522.PICC_ReadCardSerial()) {
+    Serial.print("UID: ");
+    for (byte i = 0; i &lt; mfrc522.uid.size; i++) {
+      Serial.print(mfrc522.uid.uidByte[i], HEX);
+    }
+    Serial.println();
+    mfrc522.PICC_HaltA();
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aba 5: Especificações -->
+        <div id="especificacoes" class="tab-content">
+            <div class="presentation-slide">
+                <h2><i class="fas fa-sliders-h"></i> Especificações Técnicas</h2>
+                <div class="specs-container">
+                    <div class="specs-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sensor</th>
+                                    <th>Faixa</th>
+                                    <th>Precisão</th>
+                                    <th>Interface</th>
+                                    <th>Alimentação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SW-420 (Vibração)</td>
+                                    <td>±5g</td>
+                                    <td>±3%</td>
+                                    <td>Digital</td>
+                                    <td>5V</td>
+                                </tr>
+                                <tr>
+                                    <td>ACS712 (Corrente)</td>
+                                    <td>±5A</td>
+                                    <td>±1.5%</td>
+                                    <td>Analógica</td>
+                                    <td>5V</td>
+                                </tr>
+                                <tr>
+                                    <td>HC-SR04 (Nível)</td>
+                                    <td>2-400cm</td>
+                                    <td>±3mm</td>
+                                    <td>Digital</td>
+                                    <td>5V</td>
+                                </tr>
+                                <tr>
+                                    <td>Proximidade</td>
+                                    <td>0-20mm</td>
+                                    <td>±1mm</td>
+                                    <td>Digital</td>
+                                    <td>10-30V</td>
+                                </tr>
+                                <tr>
+                                    <td>MFRC522 (RFID)</td>
+                                    <td>0-10cm</td>
+                                    <td>N/A</td>
+                                    <td>SPI</td>
+                                    <td>3.3V</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aba 6: Integração -->
+        <div id="integracao" class="tab-content">
+            <div class="presentation-slide">
+                <h2><i class="fas fa-plug"></i> Integração e Conectividade</h2>
+                <div class="integration-flow">
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Aquisição</h3>
+                        <p>Arduino/Raspberry Pi coletam dados dos sensores</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Comunicação</h3>
+                        <p>WiFi/Ethernet transmitem dados via MQTT/HTTP</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Armazenamento</h3>
+                        <p>InfluxDB/TimescaleDB armazenam séries temporais</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Visualização</h3>
+                        <p>Grafana/Kibana criam dashboards em tempo real</p>
+                    </div>
+                </div>
+                <div class="protocols-grid">
+                    <div class="protocol-card">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <h3>MQTT</h3>
+                        <p>Protocolo leve para IoT, ideal para sensores</p>
+                    </div>
+                    <div class="protocol-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Modbus</h3>
+                        <p>Padrão industrial para comunicação serial</p>
+                    </div>
+                    <div class="protocol-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>HTTP/REST</h3>
+                        <p>API REST para integração com sistemas web</p>
+                    </div>
+                    <div class="protocol-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>OPC-UA</h3>
+                        <p>Padrão seguro para automação industrial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aba 7: Referências -->
+        <div id="referencias" class="tab-content">
+            <div class="presentation-slide">
+                <h2><i class="fas fa-book"></i> Referências e Recursos</h2>
+                <div class="references-grid">
+                    <div class="reference-category">
+                        <h3><i class="fas fa-graduation-cap"></i> Documentação Técnica</h3>
+                        <ul>
+                            <li><a href="https://www.analog.com/en/technical-articles/accelerometer-selection-guide.html" target="_blank">Analog Devices - Accelerometer Selection Guide</a></li>
+                            <li><a href="https://www.ti.com/power-management/current-sense-amplifiers/overview.html" target="_blank">Texas Instruments - Current Sense Amplifiers</a></li>
+                            <li><a href="https://www.nxp.com/applications/connectivity/nfc:NFC-TECHNOLOGY" target="_blank">NXP - NFC Technology</a></li>
+                        </ul>
+                    </div>
+                    <div class="reference-category">
+                        <h3><i class="fas fa-code"></i> Tutoriais Arduino</h3>
+                        <ul>
+                            <li><a href="https://www.arduinoecia.com.br/2014/06/sensor-de-nivel-de-agua-com-arduino.html" target="_blank">Arduino e Cia - Sensor de Nível</a></li>
+                            <li><a href="https://www.baudaeletronica.com.br/sensor-de-corrente-tensao-e-potencia-ina219-com-arduino/" target="_blank">Baú da Eletrônica - INA219</a></li>
+                            <li><a href="https://vidadesilicio.com.br/como-funciona-rfid-leitor-mfrc522-com-arduino/" target="_blank">Vida de Silício - MFRC522</a></li>
+                        </ul>
+                    </div>
+                    <div class="reference-category">
+                        <h3><i class="fas fa-industry"></i> Aplicações Industriais</h3>
+                        <ul>
+                            <li><a href="https://www.siemens.com/global/en/products/automation/industrial-controls/monitoring-control-devices/vibration-monitoring.html" target="_blank">Siemens - Vibration Monitoring</a></li>
+                            <li><a href="https://www.emerson.com/en-us/automation/measurement-instrumentation/level-measurement" target="_blank">Emerson - Level Measurement</a></li>
+                            <li><a href="https://www.se.com/ww/en/product-range/663-inductive-capacitive-sensors/" target="_blank">Schneider Electric - Proximity Sensors</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo antigo das seções será removido -->
+        <section id="acelerometro" class="content-section" aria-labelledby="acelerometro-title" style="display: none;">
             <h2 id="acelerometro-title"><i class="fas fa-vibration"></i> 1. Sensor de Vibração (Acelerômetro)</h2>
-            <img src="./assets/img/sensor-de-vibracao-sw-420.jpg" alt="">
+            <img src="./assets/img/sensor-de-vibracao-sw-420.jpg" alt="Módulo sensor de vibração SW-420">
             <article>
                 <h3><i class="fas fa-fingerprint"></i> 1.1 Função Principal</h3>
                 <p>O sensor de vibração, tecnicamente conhecido como acelerômetro, mede a aceleração de um corpo. Pode operar de forma estática, para estimar inclinação em relação ao campo gravitacional, ou de forma dinâmica, para quantificar vibrações, impactos e movimentos complexos.</p>
@@ -54,12 +588,96 @@
                 <p>Base para manutenção preditiva na IIoT: análise espectral via FFT para diagnóstico precoce de rolamentos. Em aeroespacial, integra IMUs e monitora integridade estrutural. Em veículos autônomos, auxilia no posicionamento e controle de estabilidade.</p>
                 <h3><i class="fas fa-microchip"></i> 1.4 Compatibilidade com Arduino e Raspberry Pi</h3>
                 <p>Integração facilitada por módulos MEMS de baixo custo, como MPU-6050 e ADXL345, via I²C e com bibliotecas amplas.</p>
+                <h3><i class="fas fa-wave-square"></i> 1.5 Princípio de Operação</h3>
+                <p>Acelerômetros MEMS utilizam massas suspensas e pontes capacitivas/ressonadores; a variação de capacitância é convertida em tensão proporcional à aceleração. Acelerômetros piezoelétricos geram carga elétrica sob deformação mecânica, oferecendo excelente resposta em altas frequências.</p>
+                <h3><i class="fas fa-ruler-combined"></i> 1.6 Especificações e Seleção</h3>
+                <p>Critérios: faixa dinâmica (±2 g a ±200 g+), ruído espectral (µg/√Hz), frequência de corte, eixo (1/2/3 eixos), temperatura de operação e interface. Em manutenção preditiva, priorize baixo ruído e ampla banda (até kHz). Em wearables, foque em baixo consumo e 3 eixos.</p>
+                <h3><i class="fas fa-balance-scale"></i> 1.7 Vantagens e Limitações</h3>
+                <p>Vantagens: sensibilidade a microvibrações, miniaturização, custo acessível (MEMS), integração simples. Limitações: saturação em choques extremos, ruído térmico, necessidade de condicionamento de sinal e calibração periódica.</p>
+                <h3><i class="fas fa-plug"></i> 1.8 Integração e Processamento</h3>
+                <p>Para microcontroladores, use filtros digitais (IIR/FIR), janelas (Hann) e FFT para diagnóstico de frequências. Em Raspberry Pi, combine aquisição com Python (NumPy/SciPy) e dashboards (Grafana) via MQTT.</p>
+                <h3><i class="fas fa-code"></i> 1.9 Exemplo de Código Arduino (SW-420)</h3>
+                <details>
+                    <summary>Ver código</summary>
+                    <pre><code class="language-cpp">/*
+ * SW-420: Módulo de vibração com saída digital
+ * Funcionamento: O sensor piezoelétrico gera tensão proporcional à vibração.
+ * O comparador interno (LM393) converte o sinal analógico em digital.
+ * Potenciômetro ajusta a sensibilidade (threshold).
+ * 
+ * Ligações:
+ * - VCC: 5V (alimentação)
+ * - GND: Terra
+ * - DO: Saída digital (pino 2 do Arduino)
+ * - AO: Saída analógica (não usada neste exemplo)
+ */
+
+const int pinVibracao = 2;           // Pino digital para leitura
+volatile bool vibracaoDetectada = false; // Flag para interrupção
+unsigned long ultimaVibracao = 0;    // Controle de debounce
+const unsigned long DEBOUNCE_MS = 200; // Tempo mínimo entre detecções
+
+// Função de interrupção - executada quando o pino muda de HIGH para LOW
+void isrVibracao() {
+  unsigned long agora = millis();
+  if (agora - ultimaVibracao > DEBOUNCE_MS) {
+    vibracaoDetectada = true;
+    ultimaVibracao = agora;
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Sistema de detecção de vibração iniciado");
+  
+  // Configuração do pino com pull-up interno
+  // O módulo SW-420 tem saída open-drain, precisa do pull-up
+  pinMode(pinVibracao, INPUT_PULLUP);
+  
+  // Configuração da interrupção no pino 2 (INT0)
+  // FALLING: dispara quando o sinal vai de HIGH para LOW
+  attachInterrupt(digitalPinToInterrupt(pinVibracao), isrVibracao, FALLING);
+}
+
+void loop() {
+  if (vibracaoDetectada) {
+    vibracaoDetectada = false;
+    Serial.print("Vibração detectada em: ");
+    Serial.println(millis());
+    
+    // Aqui você pode adicionar outras ações:
+    // - Acionar alarme
+    // - Enviar notificação
+    // - Registrar em SD card
+  }
+  
+  // Pequeno delay para estabilidade
+  delay(10);
+}
+
+/*
+ * DICAS IMPORTANTES:
+ * 1. Ajuste o potenciômetro do módulo para calibrar a sensibilidade
+ * 2. Para medições mais precisas, use a saída analógica (AO) com ADC
+ * 3. O debounce evita múltiplas detecções de uma única vibração
+ * 4. Para análise espectral, use bibliotecas como FFT
+ * 5. Em ambientes industriais, considere filtros passa-alta
+ */
+</code></pre>
+                </details>
+                <h4>Explicação Detalhada do Código:</h4>
+                <ul>
+                    <li><strong>Interrupção:</strong> Permite detecção imediata sem bloquear o loop principal.</li>
+                    <li><strong>Debounce:</strong> Evita múltiplas detecções de uma única vibração.</li>
+                    <li><strong>Pull-up interno:</strong> Necessário pois o módulo tem saída open-drain.</li>
+                    <li><strong>Volátil:</strong> A variável é modificada na interrupção, precisa ser volatile.</li>
+                </ul>
             </article>
         </section>
 
         <section id="corrente" class="content-section" aria-labelledby="corrente-title">
             <h2 id="corrente-title"><i class="fas fa-bolt"></i> 2. Sensor de Corrente Elétrica</h2>
-            <img src="./assets/img/modulo-sensor-de-corrente-eletrica-acs712-5a.jpg" alt="">
+            <img src="./assets/img/modulo-sensor-de-corrente-eletrica-acs712-5a.jpg" alt="Módulo sensor de corrente elétrica ACS712 5A">
             <article>
                 <h3><i class="fas fa-fingerprint"></i> 2.1 Função Principal</h3>
                 <p>Mede a intensidade de corrente em um condutor, essencial para monitoramento energético, gestão de potência e diagnóstico de falhas.</p>
@@ -69,12 +687,138 @@
                 <p>Na IIoT, permitem monitoramento energético e detecção de anomalias. Em veículos elétricos, integram o BMS para cálculo de estado de carga. Em aeroespacial, monitoram PDUs.</p>
                 <h3><i class="fas fa-microchip"></i> 2.4 Compatibilidade com Arduino e Raspberry Pi</h3>
                 <p>Comuns com módulos ACS712 (Hall) e INA219 (I²C), este último medindo corrente, tensão e potência.</p>
+                <h3><i class="fas fa-wave-square"></i> 2.5 Princípio de Operação</h3>
+                <p>Hall: mede o campo magnético gerado pela corrente; isola eletricamente e funciona em AC/DC. TC: induz corrente proporcional (apenas AC). Shunt: mede queda de tensão em resistor de precisão, exigindo amplificação e isolamento quando necessário.</p>
+                <h3><i class="fas fa-ruler-combined"></i> 2.6 Especificações e Seleção</h3>
+                <p>Parâmetros: faixa (mA a kA), precisão (%FS), deriva térmica, largura de banda, isolamento, burden resistor (TC) e offset (Hall). Para medição DC com segurança, prefira Hall com isolamento.</p>
+                <h3><i class="fas fa-balance-scale"></i> 2.7 Vantagens e Limitações</h3>
+                <p>Hall: seguro e versátil, porém com offset e ruído maiores que shunt. TC: excelente para AC e alta corrente, mas não mede DC. Shunt: alta precisão e baixo custo, porém dissipação e sem isolamento intrínseco.</p>
+                <h3><i class="fas fa-plug"></i> 2.8 Integração e Processamento</h3>
+                <p>Use ADC com amostragem adequada (>= 2× maior frequência), filtros passa-baixa e cálculo RMS para AC. Em redes IIoT, publique leituras por MQTT/Modbus e agregue em timeseries (InfluxDB) para dashboards.</p>
+                <h3><i class="fas fa-code"></i> 2.9 Exemplo de Código Arduino (ACS712 5A)</h3>
+                <details>
+                    <summary>Ver código</summary>
+                    <pre><code class="language-cpp">/*
+ * ACS712-05B: Sensor de corrente por efeito Hall
+ * Funcionamento: O campo magnético da corrente induz tensão no chip Hall.
+ * A saída é proporcional à corrente que passa pelo condutor.
+ * 
+ * Características do ACS712-05B:
+ * - Faixa: ±5A
+ * - Sensibilidade: 185 mV/A (típica)
+ * - Offset: VCC/2 (2.5V com 5V de alimentação)
+ * - Precisão: ±1.5% (típica)
+ * 
+ * Ligações:
+ * - VCC: 5V
+ * - GND: Terra
+ * - OUT: Pino analógico A0
+ * - Condutor: Passe pelo orifício do sensor
+ */
+
+const int pinACS = A0;              // Pino analógico para leitura
+const float vcc = 5.0;              // Tensão de alimentação
+const float sensibilidade = 0.185;  // mV/A para ACS712-05B
+const int amostras = 2000;          // Número de amostras para RMS
+const float offset = vcc / 2.0;     // Offset típico do sensor
+
+// Função para calcular corrente RMS (AC)
+float calcularCorrenteRMS() {
+  long somaQuadrados = 0;
+  
+  // Amostragem do sinal
+  for (int i = 0; i &lt; amostras; i++) {
+    int leituraADC = analogRead(pinACS);
+    
+    // Conversão ADC para tensão
+    float tensao = (leituraADC * vcc) / 1023.0;
+    
+    // Remove offset (centra o sinal em zero)
+    float tensaoCentrada = tensao - offset;
+    
+    // Acumula quadrados para cálculo RMS
+    // Multiplica por 1e6 para evitar perda de precisão
+    somaQuadrados += (long)(tensaoCentrada * tensaoCentrada * 1000000);
+  }
+  
+  // Cálculo do valor RMS
+  float mediaQuadrados = (float)somaQuadrados / amostras;
+  float tensaoRMS = sqrt(mediaQuadrados) / 1000.0; // Volta da escala
+  
+  // Conversão para corrente
+  float correnteRMS = tensaoRMS / sensibilidade;
+  
+  return correnteRMS;
+}
+
+// Função para calcular corrente DC (média)
+float calcularCorrenteDC() {
+  long soma = 0;
+  
+  for (int i = 0; i &lt; 100; i++) {
+    int leituraADC = analogRead(pinACS);
+    float tensao = (leituraADC * vcc) / 1023.0;
+    soma += (long)((tensao - offset) * 1000); // mV
+  }
+  
+  float tensaoMedia = (float)soma / 100;
+  return tensaoMedia / sensibilidade;
+}
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Sensor de corrente ACS712 iniciado");
+  Serial.println("Aguardando estabilização...");
+  delay(2000); // Tempo para estabilização
+}
+
+void loop() {
+  // Medição de corrente RMS (AC)
+  float correnteAC = calcularCorrenteRMS();
+  
+  // Medição de corrente DC
+  float correnteDC = calcularCorrenteDC();
+  
+  // Exibição dos resultados
+  Serial.print("Corrente RMS (AC): ");
+  Serial.print(correnteAC, 3);
+  Serial.print(" A | Corrente DC: ");
+  Serial.print(correnteDC, 3);
+  Serial.println(" A");
+  
+  // Cálculo de potência (assumindo tensão conhecida)
+  float tensaoRede = 220.0; // Ajuste conforme sua rede
+  float potencia = correnteAC * tensaoRede;
+  Serial.print("Potência estimada: ");
+  Serial.print(potencia, 1);
+  Serial.println(" W");
+  
+  delay(1000);
+}
+
+/*
+ * CALIBRAÇÃO E AJUSTES:
+ * 1. Sem corrente, o sensor deve indicar ~2.5V (offset)
+ * 2. Para calibração, use multímetro de referência
+ * 3. Ajuste a sensibilidade se necessário
+ * 4. Para maior precisão, use filtro passa-baixa
+ * 5. Em aplicações industriais, considere isolamento óptico
+ */
+</code></pre>
+                </details>
+                <h4>Explicação Detalhada do Código:</h4>
+                <ul>
+                    <li><strong>Offset:</strong> O sensor gera 2.5V quando não há corrente (VCC/2).</li>
+                    <li><strong>RMS:</strong> Calcula a raiz quadrada da média dos quadrados para corrente AC.</li>
+                    <li><strong>Amostragem:</strong> Múltiplas leituras reduzem ruído e melhoram precisão.</li>
+                    <li><strong>Conversão:</strong> ADC (0-1023) → Tensão (0-5V) → Corrente (A).</li>
+                </ul>
             </article>
         </section>
 
         <section id="nivel" class="content-section" aria-labelledby="nivel-title">
             <h2 id="nivel-title"><i class="fas fa-chart-line"></i> 3. Sensor de Nível</h2>
-            <img src="./assets/img/images.jpg" alt="">
+            <img src="./assets/img/images.jpg" alt="Exemplo de sensor de nível">
             <article>
                 <h3><i class="fas fa-fingerprint"></i> 3.1 Função Principal</h3>
                 <p>Determina a altura de materiais líquidos ou sólidos em reservatórios, em modo contínuo ou de ponto.</p>
@@ -84,12 +828,156 @@
                 <p>Gestão remota de estoques (silos, tanques), medição de propelente em foguetes, e medidor de combustível em veículos.</p>
                 <h3><i class="fas fa-microchip"></i> 3.4 Compatibilidade com Arduino e Raspberry Pi</h3>
                 <p>HC-SR04 adaptado como medidor sem contato; chaves de boia conectáveis diretamente a GPIOs.</p>
+                <h3><i class="fas fa-wave-square"></i> 3.5 Princípio de Operação</h3>
+                <p>Ultrassônico: tempo de voo do pulso refletido. Radar/FMCW: micro-ondas com alta imunidade a poeira/temperatura. Capacitivo: variação de capacitância com presença do material. Boia/chave de nível: contato mecânico simples.</p>
+                <h3><i class="fas fa-ruler-combined"></i> 3.6 Especificações e Seleção</h3>
+                <p>Considere faixa, resolução, dead zone, pressão/temperatura, compatibilidade química, presença de espuma e turbulência. Para aplicações severas, sensores de radar com antena apropriada são mais robustos.</p>
+                <h3><i class="fas fa-balance-scale"></i> 3.7 Vantagens e Limitações</h3>
+                <p>Ultrassônico: econômico, porém sensível a vento/espuma. Radar: custo maior, alta confiabilidade. Capacitivo: simples e versátil, exige calibração com o produto. Boia: baixo custo e simplicidade, mas desgaste mecânico.</p>
+                <h3><i class="fas fa-plug"></i> 3.8 Integração</h3>
+                <p>Para 4–20 mA, use shunt de precisão e ADC. Para ultrassônicos, sincronize trigger/echo e filtre ruído com mediana. Integração com SCADA via 4–20 mA/Modbus simplifica supervisão.</p>
+                <h3><i class="fas fa-code"></i> 3.9 Exemplo de Código Arduino (HC-SR04)</h3>
+                <details>
+                    <summary>Ver código</summary>
+                    <pre><code class="language-cpp">/*
+ * HC-SR04: Sensor ultrassônico de distância
+ * Funcionamento: Envia pulso ultrassônico e mede o tempo de retorno.
+ * A distância é calculada usando a velocidade do som.
+ * 
+ * Características:
+ * - Alcance: 2cm a 4m
+ * - Precisão: ±3mm
+ * - Ângulo de detecção: 15°
+ * - Frequência: 40kHz
+ * 
+ * Ligações:
+ * - VCC: 5V
+ * - GND: Terra
+ * - Trig: Pino digital 9 (trigger)
+ * - Echo: Pino digital 10 (echo)
+ */
+
+const int trigPin = 9;              // Pino de trigger
+const int echoPin = 10;             // Pino de echo
+const float velocidadeSom = 343.0;  // m/s a 20°C
+const int timeout = 30000;          // Timeout em microssegundos
+const int filtroAmostras = 5;       // Amostras para filtro
+
+// Função para medir distância com filtro
+float medirDistancia() {
+  long duracao = medirMicrosegundos();
+  
+  if (duracao == 0) {
+    return -1; // Timeout ou erro
+  }
+  
+  // Cálculo da distância
+  // Dividir por 2 porque o som vai e volta
+  float distancia = (duracao * velocidadeSom) / 2000000.0; // cm
+  
+  return distancia;
+}
+
+// Função para medir tempo de eco
+long medirMicrosegundos() {
+  // Pulso de trigger (mínimo 10μs)
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  // Medição do tempo de eco
+  return pulseIn(echoPin, HIGH, timeout);
+}
+
+// Função para aplicar filtro de mediana
+float medirDistanciaFiltrada() {
+  float amostras[filtroAmostras];
+  
+  // Coleta múltiplas amostras
+  for (int i = 0; i &lt; filtroAmostras; i++) {
+    amostras[i] = medirDistancia();
+    delay(50); // Intervalo entre medições
+  }
+  
+  // Ordenação simples (bubble sort)
+  for (int i = 0; i &lt; filtroAmostras - 1; i++) {
+    for (int j = 0; j &lt; filtroAmostras - i - 1; j++) {
+      if (amostras[j] > amostras[j + 1]) {
+        float temp = amostras[j];
+        amostras[j] = amostras[j + 1];
+        amostras[j + 1] = temp;
+      }
+    }
+  }
+  
+  // Retorna a mediana (valor do meio)
+  return amostras[filtroAmostras / 2];
+}
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  
+  Serial.println("Sensor ultrassônico HC-SR04 iniciado");
+  Serial.println("Aguardando estabilização...");
+  delay(1000);
+}
+
+void loop() {
+  float distancia = medirDistanciaFiltrada();
+  
+  if (distancia > 0) {
+    Serial.print("Distância: ");
+    Serial.print(distancia, 2);
+    Serial.println(" cm");
+    
+    // Conversão para outras unidades
+    float metros = distancia / 100.0;
+    float polegadas = distancia / 2.54;
+    
+    Serial.print("Distância: ");
+    Serial.print(metros, 3);
+    Serial.print(" m (");
+    Serial.print(polegadas, 2);
+    Serial.println(" in)");
+    
+    // Detecção de proximidade
+    if (distancia < 10) {
+      Serial.println("ALERTA: Objeto muito próximo!");
+    }
+  } else {
+    Serial.println("Erro: Objeto fora de alcance ou timeout");
+  }
+  
+  delay(500);
+}
+
+/*
+ * DICAS IMPORTANTES:
+ * 1. A velocidade do som varia com a temperatura (343 m/s a 20°C)
+ * 2. Superfícies macias podem não refletir o som adequadamente
+ * 3. Múltiplos sensores podem interferir entre si
+ * 4. Use filtros para reduzir ruído em ambientes industriais
+ * 5. Para medições precisas, calibre com objetos de distância conhecida
+ */
+</code></pre>
+                </details>
+                <h4>Explicação Detalhada do Código:</h4>
+                <ul>
+                    <li><strong>Trigger:</strong> Pulso de 10μs ativa o transdutor ultrassônico.</li>
+                    <li><strong>Echo:</strong> Mede o tempo até o retorno do sinal refletido.</li>
+                    <li><strong>Cálculo:</strong> Distância = (tempo × velocidade_som) ÷ 2.</li>
+                    <li><strong>Filtro:</strong> Mediana reduz ruído e leituras errôneas.</li>
+                </ul>
             </article>
         </section>
 
         <section id="proximidade" class="content-section" aria-labelledby="proximidade-title">
             <h2 id="proximidade-title"><i class="fas fa-object-group"></i> 4. Sensor de Proximidade Indutivo e Capacitivo</h2>
-            <img src="./assets/img/sensor-indutivo-vs-capacitivo-1024x419.jpg" alt="">
+            <img src="./assets/img/sensor-indutivo-vs-capacitivo-1024x419.jpg" alt="Comparação de sensores indutivo e capacitivo">
             <article>
                 <h3><i class="fas fa-fingerprint"></i> 4.1 Função Principal</h3>
                 <p>Detectam presença de objetos a curta distância sem contato físico; o indutivo detecta metais, o capacitivo detecta diversos materiais.</p>
@@ -99,12 +987,157 @@
                 <p>Contagem em esteiras, fim de curso em CNC, verificação de posicionamento e nivelamento de mesa em impressoras 3D.</p>
                 <h3><i class="fas fa-microchip"></i> 4.4 Compatibilidade com Arduino e Raspberry Pi</h3>
                 <p>Operando tipicamente em 10–30 VDC, exigem interface (divisor de tensão, optoacoplador) para 5V/3.3V dos microcontroladores.</p>
+                <h3><i class="fas fa-wave-square"></i> 4.5 Princípio de Operação</h3>
+                <p>Indutivo: oscilador gera campo; a presença de metal altera perdas e muda a amplitude, disparando a saída. Capacitivo: a presença do alvo altera a capacitância efetiva, deslocando o ponto de disparo do circuito.</p>
+                <h3><i class="fas fa-ruler-combined"></i> 4.6 Especificações</h3>
+                <p>Distância nominal, tamanho do corpo (M8, M12, M18), material da face (PTFE/metal), frequência de comutação, proteção IP e tipo de saída (NPN/PNP/NO/NC). Em aplicações com óleo ou pó, prefira faces resistentes e IP67+.</p>
+                <h3><i class="fas fa-balance-scale"></i> 4.7 Vantagens e Limitações</h3>
+                <p>Indutivo: imune a sujeira/umidade, mas detecta apenas metais e tem alcance curto. Capacitivo: detecta quase tudo, porém suscetível a umidade e interferências ambientais.</p>
+                <h3><i class="fas fa-plug"></i> 4.8 Integração</h3>
+                <p>Ao usar PNP/NPN, adeque níveis para 3.3V/5V com divisores, optoacopladores ou módulos de interface. Use histerese via software para evitar chatter em limiares.</p>
+                <h3><i class="fas fa-code"></i> 4.9 Exemplo de Código Arduino (Proximidade NPN/PNP)</h3>
+                <details>
+                    <summary>Ver código</summary>
+                    <pre><code class="language-cpp">/*
+ * Sensor de Proximidade Indutivo/Capacitivo
+ * Funcionamento: Detecta presença de objetos sem contato físico.
+ * Indutivo: detecta metais via campo eletromagnético
+ * Capacitivo: detecta qualquer material via campo eletrostático
+ * 
+ * Tipos de saída:
+ * - NPN (coletor aberto): Ativo em LOW
+ * - PNP (emissor aberto): Ativo em HIGH
+ * - Push-Pull: Ativo em HIGH ou LOW conforme configuração
+ * 
+ * Ligações típicas:
+ * - Marrom: +VCC (10-30V)
+ * - Azul: GND
+ * - Preto: Saída digital
+ */
+
+const int pinSensor = 3;            // Pino digital para leitura
+const int ledIndicador = 13;        // LED interno para indicação
+const unsigned long debounceTime = 50; // Tempo de debounce em ms
+
+// Variáveis para controle de estado
+bool estadoAtual = false;
+bool estadoAnterior = false;
+unsigned long ultimaMudanca = 0;
+int contadorAtivacoes = 0;
+
+// Função para detectar mudança de estado com debounce
+bool detectarMudanca() {
+  bool leitura = digitalRead(pinSensor);
+  unsigned long agora = millis();
+  
+  // Debounce: ignora mudanças muito rápidas
+  if (leitura != estadoAtual) {
+    if (agora - ultimaMudanca > debounceTime) {
+      estadoAnterior = estadoAtual;
+      estadoAtual = leitura;
+      ultimaMudanca = agora;
+      return true;
+    }
+  }
+  
+  return false;
+}
+
+// Função para configurar tipo de sensor
+void configurarSensor(bool tipoNPN) {
+  if (tipoNPN) {
+    // NPN: usar pull-up interno, ativo em LOW
+    pinMode(pinSensor, INPUT_PULLUP);
+    Serial.println("Configurado para sensor NPN (ativo em LOW)");
+  } else {
+    // PNP: usar pull-down externo, ativo em HIGH
+    pinMode(pinSensor, INPUT);
+    Serial.println("Configurado para sensor PNP (ativo em HIGH)");
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledIndicador, OUTPUT);
+  
+  // Configurar tipo de sensor (ajustar conforme necessário)
+  bool sensorNPN = true; // true para NPN, false para PNP
+  configurarSensor(sensorNPN);
+  
+  Serial.println("Sistema de detecção de proximidade iniciado");
+  Serial.println("Aguardando detecção...");
+}
+
+void loop() {
+  if (detectarMudanca()) {
+    if (estadoAtual) {
+      contadorAtivacoes++;
+      Serial.print("Objeto detectado! Total de detecções: ");
+      Serial.println(contadorAtivacoes);
+      
+      // Acionar LED indicador
+      digitalWrite(ledIndicador, HIGH);
+      
+      // Aqui você pode adicionar outras ações:
+      // - Acionar relé
+      // - Enviar sinal para PLC
+      // - Registrar em log
+      
+    } else {
+      Serial.println("Objeto removido");
+      digitalWrite(ledIndicador, LOW);
+    }
+  }
+  
+  // Exibir status a cada 2 segundos
+  static unsigned long ultimaExibicao = 0;
+  if (millis() - ultimaExibicao > 2000) {
+    Serial.print("Status: ");
+    Serial.println(estadoAtual ? "ATIVO" : "INATIVO");
+    ultimaExibicao = millis();
+  }
+  
+  delay(10);
+}
+
+/*
+ * CIRCUITOS DE INTERFACE:
+ * 
+ * Para NPN (coletor aberto):
+ * Arduino Pin 3 ----[10kΩ]---- +5V
+ *                    |
+ *                Sensor (Preto)
+ *                    |
+ *                   GND
+ * 
+ * Para PNP (emissor aberto):
+ * Arduino Pin 3 ----[10kΩ]---- GND
+ *                    |
+ *                Sensor (Preto)
+ *                    |
+ *                   +5V
+ * 
+ * DICAS IMPORTANTES:
+ * 1. Verifique a tensão de alimentação do sensor (10-30V típico)
+ * 2. Use optoacopladores para isolamento em aplicações industriais
+ * 3. Ajuste a distância de detecção no sensor se disponível
+ * 4. Considere histerese para evitar oscilações
+ */
+</code></pre>
+                </details>
+                <h4>Explicação Detalhada do Código:</h4>
+                <ul>
+                    <li><strong>NPN vs PNP:</strong> Diferentes polaridades de saída requerem circuitos diferentes.</li>
+                    <li><strong>Debounce:</strong> Evita múltiplas detecções de uma única aproximação.</li>
+                    <li><strong>Pull-up/Pull-down:</strong> Resistem para definir estado lógico correto.</li>
+                    <li><strong>Contador:</strong> Registra número total de ativações para estatísticas.</li>
+                </ul>
             </article>
         </section>
 
         <section id="rfid" class="content-section" aria-labelledby="rfid-title">
             <h2 id="rfid-title"><i class="fas fa-wifi"></i> 5. Leitor RFID / NFC</h2>
-            <img src="./assets/img/images (1).jpg" alt="">
+            <img src="./assets/img/images (1).jpg" alt="Módulo leitor RFID/NFC">
             <article>
                 <h3><i class="fas fa-fingerprint"></i> 5.1 Função Principal</h3>
                 <p>RFID identifica objetos via rádio; o leitor interroga a tag que responde com dados. NFC é um subconjunto HF (13,56 MHz) para comunicação segura a curtas distâncias.</p>
@@ -114,12 +1147,216 @@
                 <p>Rastreamento de ativos e passaporte digital do produto na IIoT; inventário logístico; NFC em pagamentos e controle de acesso.</p>
                 <h3><i class="fas fa-microchip"></i> 5.4 Compatibilidade com Arduino e Raspberry Pi</h3>
                 <p>Prototipagem acessível com MFRC522 (13,56 MHz) via SPI, compatível com ampla gama de tags.</p>
+                <h3><i class="fas fa-wave-square"></i> 5.5 Princípio e Protocolos</h3>
+                <p>LF/HF: acoplamento indutivo; UHF: espalhamento retroespalhado. Protocolos comuns: ISO 14443 (NFC), ISO 15693 (HF), EPC Gen2 (UHF). Tags passivas recebem energia do campo do leitor; ativas têm bateria e maior alcance.</p>
+                <h3><i class="fas fa-ruler-combined"></i> 5.6 Especificações e Seleção</h3>
+                <p>Escolha por alcance necessário, velocidade, ambiente (metal/líquidos), tipo de tag (mifare/desfire/UHF EPC), segurança (criptografia) e região regulatória (frequência/ERP).</p>
+                <h3><i class="fas fa-balance-scale"></i> 5.7 Vantagens e Limitações</h3>
+                <p>RFID oferece leitura múltipla sem linha de visada; UHF possui maior alcance, porém é afetado por líquidos/metal. NFC tem alcance curto e alto nível de segurança/UX.</p>
+                <h3><i class="fas fa-plug"></i> 5.8 Integração</h3>
+                <p>Integre via bibliotecas (MFRC522, PN532), implemente anticolisão, autenticação quando aplicável e serialize eventos para sistemas MES/ERP via API.</p>
+                <h3><i class="fas fa-code"></i> 5.9 Exemplo de Código Arduino (MFRC522)</h3>
+                <details>
+                    <summary>Ver código</summary>
+                    <pre><code class="language-cpp">/*
+ * MFRC522: Leitor RFID/NFC 13.56 MHz
+ * Funcionamento: Comunica via SPI com tags RFID passivas.
+ * Suporta protocolos ISO 14443A (Mifare) e ISO 14443B.
+ * 
+ * Características:
+ * - Frequência: 13.56 MHz
+ * - Alcance: até 10cm (depende da tag)
+ * - Protocolos: ISO 14443A/B, Mifare Classic/Ultralight
+ * - Interface: SPI
+ * 
+ * Ligações (Arduino Uno):
+ * - VCC: 3.3V (NÃO 5V!)
+ * - GND: Terra
+ * - RST: Pino 9
+ * - SDA(SS): Pino 10
+ * - MOSI: Pino 11
+ * - MISO: Pino 12
+ * - SCK: Pino 13
+ * 
+ * Biblioteca necessária: MFRC522 por miguelbalboa
+ * Instalação: Ferramentas > Gerenciar Bibliotecas > Buscar "MFRC522"
+ */
+
+#include &lt;SPI.h&gt;
+#include &lt;MFRC522.h&gt;
+
+// Configuração dos pinos
+constexpr uint8_t SS_PIN = 10;    // Slave Select
+constexpr uint8_t RST_PIN = 9;    // Reset
+MFRC522 mfrc522(SS_PIN, RST_PIN); // Instância do leitor
+
+// Estrutura para armazenar dados da tag
+struct TagData {
+  String uid;
+  String tipo;
+  bool valida;
+  unsigned long timestamp;
+};
+
+TagData ultimaTag;
+unsigned long ultimaLeitura = 0;
+const unsigned long INTERVALO_LEITURA = 1000; // 1 segundo entre leituras
+
+// Função para converter UID para string hexadecimal
+String uidParaString(MFRC522::Uid uid) {
+  String uidString = "";
+  for (byte i = 0; i &lt; uid.size; i++) {
+    if (uid.uidByte[i] &lt; 0x10) uidString += "0";
+    uidString += String(uid.uidByte[i], HEX);
+    if (i &lt; uid.size - 1) uidString += ":";
+  }
+  return uidString;
+}
+
+// Função para identificar tipo de tag
+String identificarTipo(MFRC522::Uid uid) {
+  switch (uid.sak) {
+    case 0x08: return "Mifare Classic 1KB";
+    case 0x09: return "Mifare Classic 4KB";
+    case 0x10: return "Mifare Ultralight";
+    case 0x18: return "Mifare Plus 2KB";
+    case 0x20: return "Mifare Plus 4KB";
+    default: return "Tipo desconhecido";
+  }
+}
+
+// Função para ler dados da tag (Mifare Classic)
+bool lerDadosTag(MFRC522::Uid uid) {
+  MFRC522::MIFARE_Key key;
+  for (byte i = 0; i &lt; 6; i++) {
+    key.keyByte[i] = 0xFF; // Chave padrão
+  }
+  
+  MFRC522::StatusCode status;
+  byte buffer[18];
+  byte size = sizeof(buffer);
+  
+  // Ler bloco 1 (dados do usuário)
+  status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, 1, &key, &uid);
+  if (status != MFRC522::STATUS_OK) {
+    return false;
+  }
+  
+  status = mfrc522.MIFARE_Read(1, buffer, &size);
+  if (status != MFRC522::STATUS_OK) {
+    return false;
+  }
+  
+  // Exibir dados lidos
+  Serial.print("Dados da tag: ");
+  for (byte i = 0; i &lt; 16; i++) {
+    if (buffer[i] &lt; 0x10) Serial.print("0");
+    Serial.print(buffer[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
+  
+  return true;
+}
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial); // Aguarda conexão serial
+  
+  // Inicialização do SPI
+  SPI.begin();
+  
+  // Inicialização do MFRC522
+  mfrc522.PCD_Init();
+  
+  // Verificação da versão do chip
+  byte versao = mfrc522.PCD_ReadRegister(mfrc522.VersionReg);
+  if (versao == 0x00 || versao == 0xFF) {
+    Serial.println("ERRO: MFRC522 não detectado!");
+    while (true);
+  }
+  
+  Serial.println("Leitor RFID MFRC522 iniciado");
+  Serial.print("Versão do chip: 0x");
+  Serial.println(versao, HEX);
+  Serial.println("Aproxime uma tag RFID...");
+}
+
+void loop() {
+  // Verificar se há nova tag presente
+  if (!mfrc522.PICC_IsNewCardPresent()) {
+    return;
+  }
+  
+  // Verificar se conseguiu ler a tag
+  if (!mfrc522.PICC_ReadCardSerial()) {
+    return;
+  }
+  
+  // Verificar intervalo entre leituras
+  unsigned long agora = millis();
+  if (agora - ultimaLeitura &lt; INTERVALO_LEITURA) {
+    mfrc522.PICC_HaltA();
+    return;
+  }
+  
+  // Processar tag lida
+  ultimaTag.uid = uidParaString(mfrc522.uid);
+  ultimaTag.tipo = identificarTipo(mfrc522.uid);
+  ultimaTag.valida = true;
+  ultimaTag.timestamp = agora;
+  ultimaLeitura = agora;
+  
+  // Exibir informações da tag
+  Serial.println("=== TAG DETECTADA ===");
+  Serial.print("UID: ");
+  Serial.println(ultimaTag.uid);
+  Serial.print("Tipo: ");
+  Serial.println(ultimaTag.tipo);
+  Serial.print("Timestamp: ");
+  Serial.println(ultimaTag.timestamp);
+  
+  // Tentar ler dados (apenas para Mifare Classic)
+  if (ultimaTag.tipo.indexOf("Mifare Classic") != -1) {
+    Serial.println("Tentando ler dados...");
+    if (lerDadosTag(mfrc522.uid)) {
+      Serial.println("Dados lidos com sucesso!");
+    } else {
+      Serial.println("Falha ao ler dados da tag");
+    }
+  }
+  
+  // Parar comunicação com a tag
+  mfrc522.PICC_HaltA();
+  
+  Serial.println("Aproxime outra tag...");
+  delay(500);
+}
+
+/*
+ * DICAS IMPORTANTES:
+ * 1. Use alimentação 3.3V (NÃO 5V) para evitar danos
+ * 2. Instale a biblioteca MFRC522 antes de compilar
+ * 3. Tags Mifare Classic requerem autenticação para leitura
+ * 4. Para aplicações de segurança, implemente criptografia
+ * 5. Considere usar antena externa para maior alcance
+ * 6. Em ambientes industriais, use blindagem contra interferência
+ */
+</code></pre>
+                </details>
+                <h4>Explicação Detalhada do Código:</h4>
+                <ul>
+                    <li><strong>SPI:</strong> Interface serial para comunicação com o chip MFRC522.</li>
+                    <li><strong>UID:</strong> Identificador único de 4 bytes da tag RFID.</li>
+                    <li><strong>Autenticação:</strong> Mifare Classic requer chave para leitura de dados.</li>
+                    <li><strong>Debounce:</strong> Intervalo entre leituras evita múltiplas detecções.</li>
+                </ul>
             </article>
         </section>
 
         <section id="referencias" class="content-section" aria-labelledby="referencias-title">
             <h2 id="referencias-title"><i class="fas fa-book"></i> 6. Referências</h2>
-            <ul class="refs-list">
+            <ul class="refs">
                 <li><p>ALL ABOUT CIRCUITS. Choosing the Right Current Sensor for Your Application. 2019. <a href="https://www.allaboutcircuits.com/technical-articles/choosing-the-right-current-sensor-for-your-application/" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
                 <li><p>ANALOG DEVICES, INC. Accelerometer Selection Guide. 2017. <a href="https://www.analog.com/en/technical-articles/accelerometer-selection-guide.html" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
                 <li><p>ARDUINO E CIA. Sensor de Nível de Água com Arduino. 2014. <a href="https://www.arduinoecia.com.br/2014/06/sensor-de-nivel-de-agua-com-arduino.html" target="_blank" rel="noopener noreferrer">Acessar</a>.</p></li>
