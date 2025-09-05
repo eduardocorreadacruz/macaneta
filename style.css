@@ -394,6 +394,32 @@ footer p {
     border-radius: var(--radius);
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    min-height: 200px;
+    transition: var(--transition);
+}
+
+.content-section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(58, 51, 43, 0.2);
+}
+
+/* Fallback para imagens que não carregam */
+.content-section img:not([src]),
+.content-section img[src=""] {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.content-section img:not([src])::before,
+.content-section img[src=""]::before {
+    content: "Imagem não disponível";
 }
 
 /* ===== Botão Voltar ao Topo ===== */
