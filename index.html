@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensores Industriais e Suas Aplicações Tecnológicas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <section id="introducao" style="margin: 40px 0; padding: 20px; background: #f5f5f5; border-radius: 8px;">
+  </section>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensores Industriais e Suas Aplicações Tecnológicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+ 
+    </style>
 </head>
 <body>
-
-
-        <header class="site-header" role="banner">
-            <div class="container">
-                <div class="logo" aria-label="Página inicial">
-                    <i class="logo-icon fas fa-microchip" aria-hidden="true"></i>
-                    <h1>Sensores Industriais & Aplicações</h1>
-                </div>
-                <nav class="tab-navigation" aria-label="Navegação por Abas">
-                    <button class="tab-btn active" data-tab="intro">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                        <span>Introdução</span>
-                    </button>
-                    <button class="tab-btn" data-tab="sensores">
-                        <i class="fas fa-microchip" aria-hidden="true"></i>
-                        <span>Sensores</span>
-                    </button>
-                    <button class="tab-btn" data-tab="acelerometro">
-                      <i class="fas fa-arrows-alt-v" aria-hidden="true"></i>
-                      <span>Acelerômetro</span>
-                    </button>
-                    <button class="tab-btn" data-tab="aplicacoes">
-                        <i class="fas fa-cogs" aria-hidden="true"></i>
-                        <span>Aplicações</span>
-                    </button>
-                    <button class="tab-btn" data-tab="codigos">
-                        <i class="fas fa-code" aria-hidden="true"></i>
-                        <span>Códigos</span>
-                    </button>
-                    <button class="tab-btn" data-tab="especificacoes">
-                        <i class="fas fa-sliders-h" aria-hidden="true"></i>
-                        <span>Especificações</span>
-                    </button>
-                    <button class="tab-btn" data-tab="integracao">
-                        <i class="fas fa-plug" aria-hidden="true"></i>
-                        <span>Integração</span>
-                    </button>
-                    <button class="tab-btn" data-tab="referencias">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                        <span>Referências</span>
-                    </button>
-                </nav>
-            </div>
-        </header>
-
-    <main class="container">
-        <!-- Aba 1: Introdução -->
-        <div id="intro" class="tab-content active">
-            <div class="presentation-slide">
-                <h2><i class="fas fa-arrows-alt-v"></i> Acelerômetro: Explicação Inicial</h2>
-                <div class="intro-grid">
-                    <div>
-                        <h3>O que é e como funciona?</h3>
-                        <p>O acelerômetro mede aceleração nos eixos X, Y e Z. Em MEMS, uma massa suspensa altera a capacitância quando se move, gerando um sinal proporcional à aceleração. Em piezoelétricos, a deformação do cristal gera carga elétrica com excelente resposta em altas frequências.</p>
-                        <h3>Aplicações</h3>
-                        <ul>
-                            <li>Manutenção preditiva: vibração de rolamentos e motores</li>
-                            <li>Detecção de impactos e quedas</li>
-                            <li>Inclinação e nivelamento</li>
-                            <li>IMU (com giroscópio e magnetômetro)</li>
-                        </ul>
-                        <h3>Como escolher</h3>
-                        <ul>
-                            <li>Faixa dinâmica: ±2g a ±200g</li>
-                            <li>Ruído e largura de banda</li>
-                            <li>Interface: analógica, I²C ou SPI (ADXL345, MPU-6050)</li>
-                        </ul>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="logo" aria-label="Página inicial">
+        <i class="logo-icon fas fa-microchip" aria-hidden="true"></i>
+        <h1>Sensores Industriais & Aplicações</h1>
+      </div>
+      <nav class="tab-navigation" aria-label="Navegação por Abas">
+        <button class="tab-btn active" data-tab="intro">
+          <i class="fas fa-home" aria-hidden="true"></i>
+          <span>Introdução</span>
+        </button>
+        <button class="tab-btn" data-tab="sensores">
+          <i class="fas fa-microchip" aria-hidden="true"></i>
+          <span>Sensores</span>
+        </button>
+        <button class="tab-btn" data-tab="aplicacoes">
+          <i class="fas fa-cogs" aria-hidden="true"></i>
+          <span>Aplicações</span>
+        </button>
+        <button class="tab-btn" data-tab="codigos">
+          <i class="fas fa-code" aria-hidden="true"></i>
+          <span>Códigos</span>
+        </button>
+        <button class="tab-btn" data-tab="especificacoes">
+          <i class="fas fa-sliders-h" aria-hidden="true"></i>
+          <span>Especificações</span>
+        </button>
+        <button class="tab-btn" data-tab="integracao">
+          <i class="fas fa-plug" aria-hidden="true"></i>
+          <span>Integração</span>
+        </button>
+        <button class="tab-btn" data-tab="referencias">
+          <i class="fas fa-book" aria-hidden="true"></i>
+          <span>Referências</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <h2>Introdução</h2>
+  <p>
+    Este trabalho tem como objetivo apresentar o desenvolvimento e funcionamento de um sistema de automação utilizando sensores e atuadores. A proposta envolve a integração de componentes eletrônicos para monitoramento e controle, proporcionando maior segurança e praticidade. Ao longo deste projeto, serão abordados os conceitos, a implementação e os resultados obtidos, destacando a importância da automação no contexto atual.
+  </p>
+  
+  <main class="container">
+    <!-- Aba 1: Introdução -->
+    <div id="intro" class="tab-content active">
+      <div class="presentation-slide">
+        <h2><i class="fas fa-home"></i> Introdução aos Sensores Industriais</h2>
+        <div class="intro-grid">
+          <div class="intro-card">
+            <i class="fas fa-industry"></i>
+            <h3>Indústria 4.0</h3>
+                        <p>Revolução digital que integra sensores inteligentes, IoT e análise de dados para otimizar processos industriais.</p>
                     </div>
-                    <div>
-                      <p><small>Exemplo: módulo SW-420 para detecção de vibração</small></p>
-                      <img src="./assets/img/sensor-de-vibracao-sw-420.jpg" alt="Módulo acelerômetro/vibração SW-420">
+                    <div class="intro-card">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Sensores Inteligentes</h3>
+                        <p>Dispositivos que convertem grandezas físicas em sinais elétricos, essenciais para automação e monitoramento.</p>
+                    </div>
+                    <div class="intro-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>IIoT</h3>
+                        <p>Internet das Coisas Industrial conecta sensores, máquinas e sistemas para criar fábricas inteligentes.</p>
+                    </div>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Tipos de Sensores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Exemplos de Código</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Prático</span>
                     </div>
                 </div>
             </div>
@@ -157,73 +169,7 @@
             </div>
         </div>
 
-        <!-- Aba 3: Acelerômetro -->
-        <div id="acelerometro" class="tab-content">
-            <div class="presentation-slide">
-                <h2><i class="fas fa-arrows-alt-v"></i> Acelerômetro: Vibração, Inclinação e Movimento</h2>
-                <div class="intro-grid">
-                    <div>
-                        <h3>O que é e como funciona?</h3>
-                        <p>O acelerômetro mede aceleração nos eixos X, Y e Z. Em MEMS, uma massa suspensa altera a capacitância quando se move. Em piezoelétricos, a deformação do cristal gera carga elétrica com excelente resposta em altas frequências.</p>
-                        <h3>Aplicações</h3>
-                        <ul>
-                            <li>Manutenção preditiva (vibração de rolamentos/motores)</li>
-                            <li>Detecção de impactos e quedas</li>
-                            <li>Inclinação e nivelamento</li>
-                            <li>IMU com giroscópio e magnetômetro</li>
-                        </ul>
-                        <h3>Escolha do sensor</h3>
-                        <ul>
-                            <li>Faixa: ±2g a ±200g</li>
-                            <li>Ruído e largura de banda</li>
-                            <li>Interface: analógica/I²C/SPI (ADXL345, MPU-6050)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <img src="./assets/img/sensor-de-vibracao-sw-420.jpg" alt="Módulo sensor de vibração/acelerômetro">
-                        <p><small>Exemplo: módulo SW-420 para eventos de vibração</small></p>
-                    </div>
-                </div>
-                <div class="code-tabs">
-                    <div class="code-tab-nav">
-                        <button class="code-tab-btn active" data-code="acel-sw420">SW-420 (Digital)</button>
-                    </div>
-                    <div class="code-content">
-                        <div id="code-acel-sw420" class="code-tab-panel active">
-                            <h3><i class="fas fa-code"></i> Exemplo Arduino (interrupção)</h3>
-                            <pre><code class="language-cpp">const int pinVibracao = 2;
-volatile bool vibracaoDetectada = false;
-unsigned long ultimaVibracao = 0;
-const unsigned long DEBOUNCE_MS = 200;
-
-void isrVibracao() {
-  unsigned long agora = millis();
-  if (agora - ultimaVibracao &gt; DEBOUNCE_MS) {
-    vibracaoDetectada = true;
-    ultimaVibracao = agora;
-  }
-}
-
-void setup() {
-  Serial.begin(9600);
-  pinMode(pinVibracao, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(pinVibracao), isrVibracao, FALLING);
-}
-
-void loop() {
-  if (vibracaoDetectada) {
-    vibracaoDetectada = false;
-    Serial.println("Vibracao detectada!");
-  }
-  delay(10);
-}</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Aba 4: Aplicações -->
+        <!-- Aba 3: Aplicações -->
         <div id="aplicacoes" class="tab-content">
             <div class="presentation-slide">
                 <h2><i class="fas fa-cogs"></i> Aplicações Práticas</h2>
@@ -484,8 +430,6 @@ void loop() {
             </div>
         </div>
 
-        
-
         <!-- Aba 6: Integração -->
         <div id="integracao" class="tab-content">
             <div class="presentation-slide">
@@ -496,14 +440,31 @@ void loop() {
                             <i class="fas fa-microchip"></i>
                         </div>
                         <h3>Aquisição</h3>
-                                      <p><b>Explicação:</b> O código utiliza interrupção para detectar vibração instantaneamente, sem bloquear o funcionamento do sistema. Ideal para monitoramento em tempo real.</p>
-                                    </div>
-                                  </div>
-                                </div>
                         <p>Arduino/Raspberry Pi coletam dados dos sensores</p>
                     </div>
-                    
-                       
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Comunicação</h3>
+                        <p>WiFi/Ethernet transmitem dados via MQTT/HTTP</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Armazenamento</h3>
+                        <p>InfluxDB/TimescaleDB armazenam séries temporais</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Visualização</h3>
+                        <p>Grafana/Kibana criam dashboards em tempo real</p>
                     </div>
                 </div>
                 <div class="protocols-grid">
@@ -564,7 +525,105 @@ void loop() {
             </div>
         </div>
 
-        <!-- (removido conteúdo antigo/duplicado do acelerômetro) -->
+        <!-- Conteúdo antigo das seções será removido -->
+        <section id="acelerometro" class="content-section" aria-labelledby="acelerometro-title" style="display: none;">
+            <h2 id="acelerometro-title"><i class="fas fa-vibration"></i> 1. Sensor de Vibração (Acelerômetro)</h2>
+            <img src="./assets/img/sensor-de-vibracao-sw-420.jpg" alt="Módulo sensor de vibração SW-420">
+            <article>
+                <h3><i class="fas fa-fingerprint"></i> 1.1 Função Principal</h3>
+                <p>O sensor de vibração, tecnicamente conhecido como acelerômetro, mede a aceleração de um corpo. Pode operar de forma estática, para estimar inclinação em relação ao campo gravitacional, ou de forma dinâmica, para quantificar vibrações, impactos e movimentos complexos.</p>
+                <h3><i class="fas fa-sliders-h"></i> 1.2 Principais Características Técnicas</h3>
+                <p>A fabricação predominante envolve tecnologias MEMS e piezoelétrica. A piezoelétrica é comum em análises de alta frequência. Parâmetros-chave: alcance (g), sensibilidade (mV/g) e largura de banda. Saída analógica contínua ou digital (I²C/SPI).</p>
+                <h3><i class="fas fa-cogs"></i> 1.3 Exemplos de Aplicações Práticas</h3>
+                <p>Base para manutenção preditiva na IIoT: análise espectral via FFT para diagnóstico precoce de rolamentos. Em aeroespacial, integra IMUs e monitora integridade estrutural. Em veículos autônomos, auxilia no posicionamento e controle de estabilidade.</p>
+                <h3><i class="fas fa-microchip"></i> 1.4 Compatibilidade com Arduino e Raspberry Pi</h3>
+                <p>Integração facilitada por módulos MEMS de baixo custo, como MPU-6050 e ADXL345, via I²C e com bibliotecas amplas.</p>
+                <h3><i class="fas fa-wave-square"></i> 1.5 Princípio de Operação</h3>
+                <p>Acelerômetros MEMS utilizam massas suspensas e pontes capacitivas/ressonadores; a variação de capacitância é convertida em tensão proporcional à aceleração. Acelerômetros piezoelétricos geram carga elétrica sob deformação mecânica, oferecendo excelente resposta em altas frequências.</p>
+                <h3><i class="fas fa-ruler-combined"></i> 1.6 Especificações e Seleção</h3>
+                <p>Critérios: faixa dinâmica (±2 g a ±200 g+), ruído espectral (µg/√Hz), frequência de corte, eixo (1/2/3 eixos), temperatura de operação e interface. Em manutenção preditiva, priorize baixo ruído e ampla banda (até kHz). Em wearables, foque em baixo consumo e 3 eixos.</p>
+                <h3><i class="fas fa-balance-scale"></i> 1.7 Vantagens e Limitações</h3>
+                <p>Vantagens: sensibilidade a microvibrações, miniaturização, custo acessível (MEMS), integração simples. Limitações: saturação em choques extremos, ruído térmico, necessidade de condicionamento de sinal e calibração periódica.</p>
+                <h3><i class="fas fa-plug"></i> 1.8 Integração e Processamento</h3>
+                <p>Para microcontroladores, use filtros digitais (IIR/FIR), janelas (Hann) e FFT para diagnóstico de frequências. Em Raspberry Pi, combine aquisição com Python (NumPy/SciPy) e dashboards (Grafana) via MQTT.</p>
+                <h3><i class="fas fa-code"></i> 1.9 Exemplo de Código Arduino (SW-420)</h3>
+                <details>
+                    <summary>Ver código</summary>
+                    <pre><code class="language-cpp">/*
+ * SW-420: Módulo de vibração com saída digital
+ * Funcionamento: O sensor piezoelétrico gera tensão proporcional à vibração.
+ * O comparador interno (LM393) converte o sinal analógico em digital.
+ * Potenciômetro ajusta a sensibilidade (threshold).
+ * 
+ * Ligações:
+ * - VCC: 5V (alimentação)
+ * - GND: Terra
+ * - DO: Saída digital (pino 2 do Arduino)
+ * - AO: Saída analógica (não usada neste exemplo)
+ */
+
+const int pinVibracao = 2;           // Pino digital para leitura
+volatile bool vibracaoDetectada = false; // Flag para interrupção
+unsigned long ultimaVibracao = 0;    // Controle de debounce
+const unsigned long DEBOUNCE_MS = 200; // Tempo mínimo entre detecções
+
+// Função de interrupção - executada quando o pino muda de HIGH para LOW
+void isrVibracao() {
+  unsigned long agora = millis();
+  if (agora - ultimaVibracao > DEBOUNCE_MS) {
+    vibracaoDetectada = true;
+    ultimaVibracao = agora;
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Sistema de detecção de vibração iniciado");
+  
+  // Configuração do pino com pull-up interno
+  // O módulo SW-420 tem saída open-drain, precisa do pull-up
+  pinMode(pinVibracao, INPUT_PULLUP);
+  
+  // Configuração da interrupção no pino 2 (INT0)
+  // FALLING: dispara quando o sinal vai de HIGH para LOW
+  attachInterrupt(digitalPinToInterrupt(pinVibracao), isrVibracao, FALLING);
+}
+
+void loop() {
+  if (vibracaoDetectada) {
+    vibracaoDetectada = false;
+    Serial.print("Vibração detectada em: ");
+    Serial.println(millis());
+    
+    // Aqui você pode adicionar outras ações:
+    // - Acionar alarme
+    // - Enviar notificação
+    // - Registrar em SD card
+  }
+  
+  // Pequeno delay para estabilidade
+  delay(10);
+}
+
+/*
+ * DICAS IMPORTANTES:
+ * 1. Ajuste o potenciômetro do módulo para calibrar a sensibilidade
+ * 2. Para medições mais precisas, use a saída analógica (AO) com ADC
+ * 3. O debounce evita múltiplas detecções de uma única vibração
+ * 4. Para análise espectral, use bibliotecas como FFT
+ * 5. Em ambientes industriais, considere filtros passa-alta
+ */
+</code></pre>
+                </details>
+                <h4>Explicação Detalhada do Código:</h4>
+                <ul>
+                    <li><strong>Interrupção:</strong> Permite detecção imediata sem bloquear o loop principal.</li>
+                    <li><strong>Debounce:</strong> Evita múltiplas detecções de uma única vibração.</li>
+                    <li><strong>Pull-up interno:</strong> Necessário pois o módulo tem saída open-drain.</li>
+                    <li><strong>Volátil:</strong> A variável é modificada na interrupção, precisa ser volatile.</li>
+                </ul>
+            </article>
+        </section>
 
         <section id="corrente" class="content-section" aria-labelledby="corrente-title">
             <h2 id="corrente-title"><i class="fas fa-bolt"></i> 2. Sensor de Corrente Elétrica</h2>
