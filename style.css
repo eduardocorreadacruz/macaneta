@@ -151,9 +151,14 @@ main h3 {
 }
 
 p {
+    text-align: center;
     color: var(--text);
     margin: 0 0 20px;
     line-height: 1.7;
+}
+
+h2{
+    text-align: center;
 }
 
 /* ===== References ===== */
